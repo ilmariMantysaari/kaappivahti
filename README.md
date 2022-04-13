@@ -1,8 +1,8 @@
-Scans barcodes with camera, checks the product info from Finnish grocery stores with the barcode.
+Scans barcodes with camera, checks the product info and puts it in a database.
 Only works with products bought from Finnish stores, probably won't work at all at the time you're reading this.
 My intention was to create an app that lets you just scan the barcode of a product you've bought,
 so that you can keep a database of everything you have in your pantry so that you know what to buy and what to not buy.
-As always with hobby projects, it's very unpolished.
+As always with hobby projects, it's very WIP and very unpolished.
 
 ### How does this work
 
