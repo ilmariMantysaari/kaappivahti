@@ -1,0 +1,31 @@
+version: "3.0"
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_NAME: pantrywatch
+      DB_USER: pantrywatch
+      DB_PASS: kissa
+    volumes:
+      - ./src:/app/src
+
+  database:
+    image: postgres:12.3
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: pantrywatch
+      POSTGRES_USER: pantrywatch
+      POSTGRES_PASSWORD: kissa
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
